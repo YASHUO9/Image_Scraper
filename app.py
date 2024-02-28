@@ -26,4 +26,5 @@ for index, img in enumerate(soup):
     img_url = img["src"]
     img_data = urlopen(img_url).read()
     with open(f"{save_dir}{index}.jpg", "wb") as f:
+        #wb is write binary
         f.write(img_data)
